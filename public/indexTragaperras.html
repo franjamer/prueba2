@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Pruebas</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="../node_modules/bulma/css/bulma.min.css"> -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js" 
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header id="cabecera" class="cabecera">
+</header>
+    <main id="principal">
+        <div class="contenedor-img">
+            <section class="imgyboton">
+                <img class="imgn" id="imgn1"  width="50px" height="100px" src="../public/imagenes/granpremio.svg" alt="imagen de frutas que premian" >
+                <button class="cajas button is-rounded" id="caja1">SPIN               
+                </button>
+            
+            </section>
+            <section class="imgyboton">
+                <img class="imgn" id="imgn2"  width="50px" height="100px" src="../public/imagenes/granpremio.svg" alt="imagen de frutas que premian" >
+                <button class="cajas button is-rounded" id="caja2">SPIN                
+                </button>
+            </section>
+            <section class="imgyboton">
+                <img class="imgn" id="imgn3"  width="50px" height="100px" src="../public/imagenes/granpremio.svg" alt="imagen de frutas que premian" >
+                <button class="cajas button is-rounded" id="caja3">SPIN                
+                </button>
+            </section>
+            <section class="imgyboton">
+                <img class="imgn" id="imgn4"  width="50px" height="100px" src="../public/imagenes/granpremio.svg" alt="imagen de frutas que premian" >
+                <button class="cajas button is-rounded" id="caja4">SPIN                
+                </button>
+            </section>
+        </div>
+    </main> 
+<!-- ventana modal para nueva partida y agregar saldo -->
+<section id="sec-modal" class="modales">
+    <div class="modal__container">
+        <img src="./imagenes/monedas bote.svg" alt="imagen de saco de monedas" class="modal__img" >
+        <h2 class="modal__title">¡Por favor, ingrese una cantidad para jugar</h2>
+        <label id="labelNuevoSaldo" class="modal__parrafo" value="Nuevo Saldo" for="nuevoSaldo">
+        <input id="nuevoSaldo" name="nuevoSaldo" type="number" min="20" step="5">
+        </label> 
+        <a href="#" class="modal__cierre">
+            Agregar Saldo
+        </a>
+    </div>
+    <!-- ventana modal para combinacion premiada  -->
+</section>
+<section id="premio" class="modales">
+    <div class="modal__container">
+        <img class="modal__img" src="./imagenes/premio.svg" alt="imagen de premio">
+        <h2>¡EHHH! ¡TIENES COMBINACION GANADORA!</h2>
+        <h3>Has ganado xxx €</h3>
+        <!-- <a  href="#" class="modal__cierre_premio">Cobrar Premio</a> -->
+    </div>
+</section>
+
+<!-- ventana modal para cobrar con tarjeta de -->
+<section id="tarjeta" class="modales">
+    <div class="modal__container">
+        <h2 class="modal__title">Pasar Saldo a Mi tarjeta</h2>
+        <h3 class="modal__parrafo">En construccion</h3>
+        <h4 class="modal__parrafo">Disculpen las moléstias</h4>
+        <img src="./imagenes/tarjeta-de-credito.png" alt="imagen de tarjeta">        
+    </div>
+</section>
+<div id="botonera" class="botones">  
+    
+
+</div>
+   
+ <!-- <div id="container" class="contenedor"></div> -->
+ <!-- Tabla de Combinaciones. -->
+<section class="tercio-inferior">
+ <button id="boton"class="superBoton">Iniciar Tirada</button>
+<!-- <div class="combos">
+     <img class="img-tabla-combos" width="50%" height="50%" src="./imagenes/tabla-combos-solo.svg"alt="tabla de premios"> 
+</div>           -->
+<div class="img-individuales">
+    <label>Valores Individuales</label>
+    <section class="img-filas">
+    <label>0.05<img width="1%" height="1%" src="imagenes/ciruela.svg" alt="imagen de ciruela">         </label>        
+    <label>0.1<img  width="1%" height="1%" src="imagenes/cereza.svg" alt="imagen de cereza">           </label>              
+    <label>0.2<img  width="1%" height="1%" src="imagenes/fresa.svg" alt="imagen de una fresa">         </label>        
+ 
+    </section>                                              
+    <section class="img-filas">
+    <label>0.5<img  width="1%" height="1%" src="imagenes/naranja.svg" alt="imagen de una naranja">     </label>    
+    <label>1<img    width="1%" height="1%" src="imagenes/limon.svg" alt="imagen de limón">             </label>            
+    <label>2<img    width="1%" height="1%" src="imagenes/platanos.svg" alt="imagen de platanos">       </label>      
+   
+    </section>
+    <section class="img-filas">
+    <label>5<img    width="1%" height="1%" src="imagenes/sandia.svg" alt="imagen de una sandia">       </label>      
+    <label>10<img   width="1%" height="1%" src="imagenes/siete.svg" alt="imagenes de un siete">        </label>       
+    <label>20<img   width="1%" height="1%" src="imagenes/granpremio.svg" alt="imagen de gran premio">  </label>    
+    </section>
+
+</div>
+</section>
+</body>
+<script type="module" src="main5.js"></script>
+<!-- <script type="module" src="modulo1.js"></script> -->
+</html>
+
+ 

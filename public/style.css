@@ -1,0 +1,325 @@
+html{
+    height: 150vh;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aquamarine;
+    height: max-content;
+}
+.cabecera{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 6px;
+    justify-content: space-evenly;
+    width: 90%;
+    background-color: blueviolet;
+    padding: 3%;
+}
+header > .marcadores {
+    display: flex;    
+    justify-content: space-around;
+    align-items: stretch;
+    width: 80%;
+    background-color: blue;
+    margin: 1%;
+    padding: 1%;
+}
+header > .marcadores > div > .marc-valor {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: antiquewhite;
+    text-align: center;
+}
+.marcadores{
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+main > *  {
+    margin:0,10px;
+    padding: 20px;
+    width: 100%;
+    background-color:cadetblue;
+    border-radius: 6 px;
+    display:inline-flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+
+}
+main > contenedor-img > *{
+    display: flex;
+    justify-content: space-evenly   ;
+}
+.contador{
+    text-align: center;
+    background-color: burlywood;
+}
+section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:burlywood;
+}
+section>span {
+    background-color: beige;
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+section > .rued-marc {
+    display: inline-flex;
+}
+img {
+    width: 75%;
+    height: 75%;
+    background-color: aquamarine;
+}
+main > .cuerpo {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 600px;
+    background-color: chocolate;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-glb {
+    height: 300px;
+}
+.btn-glb > * {
+    height: 25px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.imgn {
+ 
+    padding: 1%;
+    background-color: burlywood;
+    width: 80%;
+    height: 80%;
+    border-radius: 50px;
+}
+
+
+.combos > .img-tabla-combos{
+
+    display:flex;
+    width: 300px;
+    height:300px;
+    padding: 1%;
+    /* background-color: rgb(112, 112, 35); */
+    justify-content: center;  
+    align-items: center;  
+}
+.combos-gan, .combos-prem {
+
+    background-color: rgb(166, 241, 216);   
+    height: auto;
+    width: 100%;
+    margin: 1%;
+    text-align: center;
+}
+
+
+ .comb-figuras> img{
+    width: 200px;
+    height: 350px;
+    border-radius: 6px;
+    background-color: cadetblue;
+    padding: 3px;
+    display:flex;
+    justify-content: center;
+}
+/* clase prescindible cuando se cambie a una imagen */
+.comb-figuras{
+    display:inline-flex;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Zona para el boton de Iniciar tirada y el campo de número de tiradas */
+.botones{
+    background-color: bisque;
+    width: 86%;
+    height: max-content;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.botones > button, .boton{
+width: 100px;
+height: 40px;
+}
+
+.imgyboton{
+    display:flex;
+    flex-direction: column;
+}
+
+
+label{
+    
+    background-color:rgb(201, 164, 164) ;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+input{
+    width: fit-content;
+    display:flex;
+    justify-content: center;
+}
+.contador-clicks {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: impact;
+    margin: 10px;
+    color:aliceblue
+}
+/* configuracion de las partes que son responsive y adaptables  */
+@media (width<  720px) {
+    header {
+        display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    }
+.botones{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+}
+}
+ 
+.modales{
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display:flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;   
+}
+
+.modal---mostrar{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+   
+}
+.modal__container{
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #fff;
+    margin:auto;
+    border-radius:6px;
+    padding: 3em, 2.5em;
+    display: grid;
+    gap:1em;
+    place-items: center;
+    grid-auto-columns: 100%; 
+
+}
+.modal__title{
+    font-size:2.5rem ;
+}
+.modal__parrafo{
+    margin-bottom: 10px;
+}
+.modal__img{
+    width: 90%;
+    max-width: 300px;
+}
+.modal__cierre{
+    text-decoration: none;
+    color:#fff;
+    background-color: #f26250;
+    padding: 1em,3em;
+    border: 1px solid;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;   
+} 
+
+.modal__cierre:hover {
+    color:#f26250;
+    background-color: #fff;
+}
+
+.superBoton{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+.tercio-inferior{
+    display:flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    width:100%;
+}
+
+.img-individuales{
+    width:66%;
+    display:flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap:10px;
+}
+
+label > img{
+    width: 25%;
+    height: 25%;
+}
+.img-individuales > label{
+    text-align: center;
+}
+.img-individuales> .img-filas > label{
+    width: fit-content;
+    height: fit-content;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.combos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100px;
+    height: 200px;
+}
+.img-tabla-combos{
+   display: flex;
+}
+
+
+
+
+
