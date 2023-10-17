@@ -18,10 +18,10 @@ const grupoFiguras=[
 
 //IDENTIFICADORES DE LAS ETIQUETA IMG QUE SE MUESTRAN.
 const Tablero=["#imgn1","#imgn2","#imgn3","#imgn4"]
-let imgTablero1 = $("#imgn1");
-let imgTablero2 = $("#imgn2");
-let imgTablero3 = $("#imgn3");
-let imgTablero4 = $("#imgn4");
+let imgTablero1 = ("#imgn1");
+let imgTablero2 = ("#imgn2");
+let imgTablero3 = ("#imgn3");
+let imgTablero4 = ("#imgn4");
 let rutaImgTablero1 = imgTablero1.attr("src");
 let rutaImgTablero2 = imgTablero2.attr("src");
 let rutaImgTablero3 = imgTablero3.attr("src");
@@ -168,7 +168,7 @@ cabecera.appendChild(labelResultado);
 
 // propiedades del elemento elemento resultado
 resultado.id ="resultado";
-name="resultado"
+resultado.name="resultado";
 resultado.innerHTML="hola";
 resultado.type = "number";
 resultado.textContent =  "resultado de la tirada";
@@ -188,7 +188,7 @@ cabecera.appendChild(labelApuesta);
 
 //propiedades del Elemento montoApuesta 
 montoApuesta.readOnly = false;
-montoApuesta.required;
+montoApuesta.required = 1;
 montoApuesta.min = 5;
 montoApuesta.id = "apuesta";
 montoApuesta.className= "is-primary is-rounded";
@@ -244,25 +244,25 @@ function reseteo (){
     let totalinterno = 0;
     let i = 0;
     let j = 0;
-    $(".cajas").removeAttr("disabled") 
+    (".cajas").removeAttr("disabled") 
       for(i = 0 ; i < 4 ; i++)
     {      
       console.log(ObjTablero[i].Id)
-      let comparacion = (ObjTablero[i].Id == Tablero[i]);   
+      let comparacion = (ObjTablero[i].Id === Tablero[i]);   
 
       if(comparacion)
         {        
-          $(Tablero[i]).attr("src",ObjFiguras[numAleato()].ruta); 
-            ObjTablero[i].ruta = $(Tablero[i]).attr("src");
+          (Tablero[i]).attr("src",ObjFiguras[numAleato()].ruta); 
+            ObjTablero[i].ruta = (Tablero[i]).attr("src");
             for (j = 0 ; j < 8 ; j++)
             {
-              if ((ObjFiguras[j].ruta == ObjTablero[i].ruta) && (contador == 19))
+              if ((ObjFiguras[j].ruta === ObjTablero[i].ruta) && (contador === 19))
               {
                 ObjTablero[i].valor = ObjFiguras[j].valor            
               }
             }       
         }
-        if(contador == 19){
+        if(contador === 19){
           totalinterno += ObjTablero[i].valor;        
           total = totalinterno;         
         }  

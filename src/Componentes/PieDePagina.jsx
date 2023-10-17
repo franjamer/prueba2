@@ -1,5 +1,5 @@
-import granpremio from './granpremio.svg';
-import './footer.css'
+import granpremio from '../imagenes/granpremio.svg';
+import '../estilos/piedepagina.css'
 function PieDePagina(){
     return(
         <footer className='contenedor-footer'>       
