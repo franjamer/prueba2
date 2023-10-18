@@ -1,11 +1,11 @@
 //funcion que devuelve un numero aleatorio 
 //modulo de 9, porque hay 9 imágenes a mostrar
-function numAleato(){
-  let aleatorio=Math.random(); 
-  let numeroEntero = Math.trunc(aleatorio *10);
-  numeroEntero= numeroEntero % 9;    
-  console.log(numeroEntero);
-  return numeroEntero;    
+const numAleato= () => {
+    let aleatorio=Math.random(); 
+    let numeroEntero = Math.trunc(aleatorio *10);
+    numeroEntero= numeroEntero % 9;    
+    console.log(numeroEntero);
+  return (numeroEntero)    
 }
 
 //array maestro de imagenes
@@ -16,16 +16,16 @@ const grupoFiguras=[
   ]
 
 
-//IDENTIFICADORES DE LAS ETIQUETA IMG QUE SE MUESTRAN.
-const Tablero=["#imgn1","#imgn2","#imgn3","#imgn4"]
-let imgTablero1 = ("#imgn1");
-let imgTablero2 = ("#imgn2");
-let imgTablero3 = ("#imgn3");
-let imgTablero4 = ("#imgn4");
-let rutaImgTablero1 = imgTablero1.attr("src");
-let rutaImgTablero2 = imgTablero2.attr("src");
-let rutaImgTablero3 = imgTablero3.attr("src");
-let rutaImgTablero4 = imgTablero4.attr("src");
+// //IDENTIFICADORES DE LAS ETIQUETA IMG QUE SE MUESTRAN.
+// const Tablero=["#imgn1","#imgn2","#imgn3","#imgn4"]
+// let imgTablero1 = ("#imgn1");
+// let imgTablero2 = ("#imgn2");
+// let imgTablero3 = ("#imgn3");
+// let imgTablero4 = ("#imgn4");
+// let rutaImgTablero1 = imgTablero1.attr("src");
+// let rutaImgTablero2 = imgTablero2.attr("src");
+// let rutaImgTablero3 = imgTablero3.attr("src");
+// let rutaImgTablero4 = imgTablero4.attr("src");
 let ObjFiguras = [
   {
     "id":1,

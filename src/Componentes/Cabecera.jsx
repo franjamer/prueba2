@@ -1,24 +1,45 @@
-// import logo from './logo.svg';
+
+import { useState } from 'react';
+import ComponenteMarcador from './ComponenteMarcador';
 import '../estilos/cabecera.css'
+import Botones from './Botones';
 function Cabecera() {
+  const [estadoCompartidoCabecera, setEstadoCompartidoCabecera] = useState(0)
+  const [estadoCompartidoApuestas, setEstadoCompartidoApuestas] = useState(0)
+  const [estadoCompartidoBote, setEstadoCompartidoBote] = useState(0)
+  const [estadoCompartidoTiradas, setEstadoCompartidoTiradas] = useState(0)
+  const cantidadBote = 'Cantidad de bote'
+  const cantidadApuesta = 'Apuesta'
+  const numeroTiradas = 'Numero de Tiradas'
+  const handleClickCabecera = () => {
+    setEstadoCompartidoCabecera(estadoCompartidoCabecera + 1)
+  }
+  const handleClickBote = () => {
+    setEstadoCompartidoBote(estadoCompartidoBote + 1)
+  }
+  const handleClickApuestas = () => {
+    setEstadoCompartidoApuestas(estadoCompartidoApuestas + 1)
+  }
+
+  const handleClickTiradas = () => {
+    setEstadoCompartidoTiradas(estadoCompartidoTiradas + 1)
+  }
+
   return (
     <header className="cabecera-marcador">
       <h1>Tragaperras Digital</h1>
       <h3>Marcador de Tragaperras</h3>
       <div className='contenedor-marcador'>
-
-        <label>
-          Cantidad de Bote
-          <input type='number' placeholder='Cantidad en Bote' />
-        </label>
-        <label>
-          Apuesta
-          <input type='number'  placeholder='Cantidad Apostada'/>
-        </label>
-        <label>
-          Numero de tiradas
-          <input type='number' min={3} value={3} />
-        </label>
+        <ComponenteMarcador NombreMarcador={cantidadBote} valorMarcador={estadoCompartidoBote} />
+        <ComponenteMarcador NombreMarcador={cantidadApuesta} valorMarcador={estadoCompartidoApuestas} />
+        <ComponenteMarcador NombreMarcador={numeroTiradas} valorMarcador={estadoCompartidoTiradas} />
+        <p>{estadoCompartidoCabecera}</p>
+        <Botones
+          onClickCabecera={handleClickCabecera}
+          onClickBote={handleClickBote}
+          onClickApuestas={handleClickApuestas}
+          onClickTiradas={handleClickTiradas}
+        />
       </div>
     </header>
   )

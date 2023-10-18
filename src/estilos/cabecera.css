@@ -59,6 +59,10 @@
 .contenedor-marcador > label {
   color:brown;
   background-color: rgb(162, 242, 130);
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  gap:10px;
 }
 label{
   padding: 5px;

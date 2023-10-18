@@ -1,16 +1,12 @@
 import React from 'react'
 import { ObjetoFiguras } from '../ObjetoFiguras'
-import tablaDePremios from '../imagenes/tabla-combos-solo.svg'
 import '../estilos/style.css'
 function TercioInferior() {
   return (
 <section className="tercio-inferior">
         <button id="boton"class="superBoton">
             Iniciar Tirada
-        </button>
-    {/* <div className="combos">
-        <img className="img-tabla-combos" width="100%" height="100%" src={tablaDePremios} alt="tabla de premios"/> 
-    </div>            */}
+        </button>  
     <div className="img-individuales">
     <label>
         Valores Individuales

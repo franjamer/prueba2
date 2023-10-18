@@ -1,15 +1,25 @@
-// import sandia from './sandia.svg'
+import { useState } from 'react';
 import '../estilos/cuerpo.css'
-// import BotoneraCentral from './BotoneraCentral';
-import Tablero from './Tablero';
+
 import '../estilos/tablero.css'
-// import PieDePagina from './PieDePagina';
 import TercioInferior from './TercioInferior';
+import Botones from './Botones';
+
+
 export default function Cuerpo() {
+    const [estadoCompartido,setEstadoCompartido]=useState(0)
+    const [estadoCompartidoCabecera,setEstadoCompartidoCabecera]=useState(0)
+        const handleClick=()=>{
+            setEstadoCompartido(estadoCompartido+1)
+            setEstadoCompartidoCabecera(estadoCompartidoCabecera+1)
+        }
+
     return (
         <div className='cuerpo'>           
-            <Tablero />         
-            <TercioInferior />
+            <button onClick={handleClick}>pulsame</button>
+            
+            <p>{estadoCompartido}</p>          
+            <Botones />
         </div>
     )
 }
